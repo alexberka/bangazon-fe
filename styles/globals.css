@@ -18,5 +18,87 @@ a {
 }
 
 body {
-  background-color: #88effd;
+  background-color: rgb(235, 235, 235);
+}
+
+.header {
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
+  font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.product-container {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.product-card {
+  display: flex;
+  width: 350px;
+  height: 100px;
+  background: white;
+  border-radius: 5px;
+  border: 1px solid black;
+  .pc-image {
+    height: 100%;
+    width: 100px;
+    object-fit: contain;
+    border-radius: 5px 0 0 5px;
+  }
+  .pc-info {
+    padding: 5px;
+    width: 250px;
+  }
+  .pc-seller {
+    display: block;
+    font-size: 0.8rem;
+    a:hover {
+      color: darkgray;
+    }
+  }
+  .pc-price {
+    display: inline;
+    margin-right: 4px;
+  }
+  .pc-category {
+    display: inline;
+    font-size: 0.8rem;
+  }
+}
+
+.product-card:hover {
+  box-shadow: 1px 1px 0 gray;
+  cursor: pointer;
+}
+
+.product-details {
+  .pd-product {
+    display: flex;
+    gap: 20px;
+    .pd-image {
+      width: 40%;
+      max-width: 300px;
+      max-height: 500px;
+      object-fit: contain;
+      background: white;
+      border: 1px solid black;
+      border-radius: 10px;
+    }
+    .pd-info {
+      flex-grow: 1;
+      .pd-description {
+        font-size: 1.3rem;
+        font-style: italic;
+      }
+      .pd-quantity, .pd-seller {
+        display: inline-block;
+      }
+      .pd-price {
+        font-size: 2rem;
+      }
+    }
+  }
 }
