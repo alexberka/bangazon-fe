@@ -197,3 +197,29 @@ body {
   width: 600px;
   text-align: center;
 }
+
+.order-container {
+  .order-listing {
+    display: flex;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 600px;
+    margin: 10px auto;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    .ol-date {
+      font-size: 1.5rem;
+      width: 40%;
+    }
+    .ol-cost {
+      width: 35%;
+      text-align: right;
+    }
+    .ol-items {
+      width: 20%;
+      text-align: right;
+    }
+  }
+}
