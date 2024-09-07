@@ -9,7 +9,7 @@ export default function ProductViewer() {
 
   useEffect(() => {
     getSingleProduct(router.query.id).then(setProduct);
-  }, []);
+  }, [router.query.id]);
 
   return (
     <>

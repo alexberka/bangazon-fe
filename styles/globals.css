@@ -33,6 +33,7 @@ body {
   flex-flow: row wrap;
   gap: 20px;
   justify-content: center;
+  width: 100%;
 }
 
 .product-card {
@@ -96,9 +97,34 @@ body {
       .pd-quantity, .pd-seller {
         display: inline-block;
       }
+      .pd-seller:hover {
+        color: darkgray;
+      }
       .pd-price {
         font-size: 2rem;
       }
     }
+  }
+}
+
+.seller-card {
+  border-top: 5px double black;
+  .sc-header, .sc-items-sold {
+    display: inline-block;
+  }
+  .sc-header {
+    font-size: 1.5rem;
+    margin-right: 5px;
+    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  .sc-header:hover {
+    color: darkgray;
+    cursor: pointer;
+  }
+  .sc-items-sold {
+    font-style: italic;
+  }
+  .sc-product-title {
+    text-align: center;
   }
 }

@@ -12,12 +12,15 @@ export default function ProductCard({ product }) {
           <div className="pc-title">
             {product.title}
           </div>
-          <div className="pc-seller">
-            by&nbsp;
-            <Link passHref href={`/sellers/${product.seller.id}`}>
-              {product.seller.username}
-            </Link>
-          </div>
+          {product.seller
+            && (
+            <div className="pc-seller">
+              by&nbsp;
+              <Link passHref href={`/sellers/${product.seller.id}`}>
+                {product.seller.username}
+              </Link>
+            </div>
+            )}
           <div className="pc-price">
             ${product.price.toFixed(2)}
           </div>
