@@ -26,8 +26,8 @@ const getTopProducts = () => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-const getSingleProduct = (id) => new Promise((resolve, reject) => {
-  fetch(`${ENDPOINT}/products/${id}`, {
+const getSingleProduct = (productId, userId) => new Promise((resolve, reject) => {
+  fetch(`${ENDPOINT}/products/${productId}/in-cart/${userId}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
