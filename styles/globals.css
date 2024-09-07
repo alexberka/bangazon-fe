@@ -170,3 +170,30 @@ body {
     box-shadow: inset 1px 1px 0 gray;
   }
 }
+
+.checkout-list {
+  margin: 0 auto;
+  width: 600px;
+  max-width: 50%;
+  font-size: 1.2rem;
+  .checkout-list-item {
+    display: flex;
+    justify-content: space-between;
+    .cl-title {
+      max-width: 80%;
+    }
+    .cl-price {
+      text-align: right;
+    }
+  }
+  .checkout-total {
+    text-align: right;
+    border-top: 1px solid black;
+  }
+}
+
+.checkout-form {
+  margin: 20px auto;
+  width: 600px;
+  text-align: center;
+}

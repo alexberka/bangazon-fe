@@ -26,11 +26,13 @@ export default function Cart() {
         {cart?.products.map((p) => <ProductCard key={p.orderProductId} product={p} onUpdate={updateCart} />)}
       </div>
       <div className="cart-total">Cart Total: ${cart.currentCost.toFixed(2)}</div>
-      <Link passHref href="/checkout">
-        <div className="cart-checkout-btn">
-          Checkout &#40;{cart.products.length} item{cart.products.length > 1 && 's'}&#41;
-        </div>
-      </Link>
+      {cart.products.length > 0 && (
+        <Link passHref href="/checkout">
+          <div className="cart-checkout-btn">
+            Checkout &#40;{cart.products.length} item{cart.products.length > 1 && 's'}&#41;
+          </div>
+        </Link>
+      )}
     </div>
   );
 }
