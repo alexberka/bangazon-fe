@@ -9,14 +9,8 @@ const getUserCart = (userId) => new Promise((resolve, reject) => {
       'Content-Type': 'application/json',
     },
   })
-    .then((resp) => {
-      if (resp) {
-        resolve(resp.json());
-      } else {
-        resolve({});
-      }
-    })
-    .then(resolve)
+    .then((resp) => resp.json())
+    .then((data) => resolve(data || {}))
     .catch(reject);
 });
 

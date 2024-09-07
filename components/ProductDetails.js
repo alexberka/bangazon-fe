@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Image } from 'react-bootstrap';
 import Link from 'next/link';
 
-export default function ProductDetails({ product }) {
+export default function ProductDetails({ product, onCartAdd }) {
   return (
     <div className="product-details">
       <div className="header">
@@ -24,6 +24,8 @@ export default function ProductDetails({ product }) {
               </Link>
             </div>
           </div>
+          <button type="button" onClick={onCartAdd}>Add To Cart</button>
+          {product.inCart > 0 && (<div>{product.inCart} in cart</div>)}
         </div>
       </div>
     </div>
@@ -36,6 +38,7 @@ ProductDetails.propTypes = {
     title: PropTypes.string,
     description: PropTypes.string,
     imageUrl: PropTypes.string,
+    inCart: PropTypes.number,
     quantity: PropTypes.number,
     price: PropTypes.number,
     category: PropTypes.shape({
@@ -47,4 +50,5 @@ ProductDetails.propTypes = {
       username: PropTypes.string,
     }),
   }).isRequired,
+  onCartAdd: PropTypes.func.isRequired,
 };
