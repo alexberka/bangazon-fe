@@ -11,7 +11,7 @@ function Home() {
 
   return (
     <>
-      <div className="header">Best Sellers</div>
+      <div className="header">Top Products</div>
       <div className="product-container">
         {products.length > 0
           && products.map((p) => (<ProductCard key={p.id} product={p} />))}
