@@ -14,6 +14,7 @@ export default function Cart() {
 
   useEffect(() => {
     updateCart();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user]);
 
   if (!cart.id) {

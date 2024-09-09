@@ -7,7 +7,7 @@ export default function UserProfile() {
   const router = useRouter();
 
   return (
-    <div>
+    <div className="profile">
       <div className="header">Your Profile</div>
       <div className="profile-name">{user.firstName} {user.lastName}</div>
       <div className="profile-username">{user.username}</div>

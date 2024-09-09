@@ -21,6 +21,24 @@ body {
   background-color: rgb(235, 235, 235);
 }
 
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background: rgb(122, 0, 122);
+  .logo {
+    font-family: Cochin, Georgia, Times, 'Times New Roman', serif
+  }
+  .nav-left, .nav-right {
+    display: flex;
+  }
+  .nav-right {
+    width: 13%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .header {
   width: 100%;
   text-align: center;
@@ -127,6 +145,7 @@ body {
 
 .seller-card {
   border-top: 5px double black;
+  margin-bottom: 20px;
   .sc-header, .sc-items-sold {
     display: inline-block;
   }
@@ -221,5 +240,50 @@ body {
       width: 20%;
       text-align: right;
     }
+  }
+  .order-listing:hover {
+    background: white;
+  }
+}
+
+.profile {
+  .profile-name, .profile-username {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .profile-name {
+    font-size: 1.5rem;
+  }
+  .profile-username {
+    font-style: italic;
+  }
+  .orders-btn {
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+  .orders-btn:hover {
+    background: white;
+  }
+}
+
+.order-info {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+  margin: 0 auto 20px;
+  font-size: 1.3rem;
+  font-style: italic;
+}
+
+.checkout-ty1, .checkout-ty2, .checkout-ty3 {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  font-size: 1.3rem;
+}
+
+.checkout-ty3 {
+  a:hover {
+    color: darkgray;
   }
 }

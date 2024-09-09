@@ -40,7 +40,8 @@ export default function Checkout() {
       <>
         <div className="header">Order Successful!</div>
         <div className="checkout-ty1">Bangazon thanks you for your patronage</div>
-        <div className="checkout-ty2"><Link passHref href={`/user/orders/${cart.id}`}>Review Order Details</Link> or <Link passHref href="/products">Return To Products</Link> to continue shopping</div>
+        <div className="checkout-ty2">You will be contacted when your order ships from the seller(s)</div>
+        <div className="checkout-ty3"><Link passHref href={`/user/orders/${cart.id}`}>Review Order Details</Link> or <Link passHref href="/products">Return To Products</Link> to continue shopping</div>
       </>
     );
   }
